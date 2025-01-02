@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_ConsoleApp", "YogaManagement_ConsoleApp\YogaManagement_ConsoleApp.csproj", "{5C6C3C24-05D3-48AF-9D3D-79C9E0F222F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_ClassLibrary", "YogaManagement_ClassLibrary\YogaManagement_ClassLibrary.csproj", "{3441E032-B094-411B-916B-303238437ACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_WebApp", "YogaManagement_WebApp\YogaManagement_WebApp.csproj", "{C63E01BE-30A9-4B22-8EC5-ADE0B6481D41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3441E032-B094-411B-916B-303238437ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3441E032-B094-411B-916B-303238437ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3441E032-B094-411B-916B-303238437ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63E01BE-30A9-4B22-8EC5-ADE0B6481D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63E01BE-30A9-4B22-8EC5-ADE0B6481D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63E01BE-30A9-4B22-8EC5-ADE0B6481D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63E01BE-30A9-4B22-8EC5-ADE0B6481D41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
