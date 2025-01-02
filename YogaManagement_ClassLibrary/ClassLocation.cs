@@ -16,8 +16,8 @@ namespace YogaManagement_ClassLibrary
         public List<ClassFormat> FormatsAvailable { get; set; }
         //many - to - one relationship with class
         // Navigation property for related Classes
-        public virtual ICollection<Class> Classes { get; set; }
-            = new List<Class>();
+        public virtual ICollection<YogaClass> Classes { get; set; }
+            = new List<YogaClass>();
 
     }
     public enum ClassFormat

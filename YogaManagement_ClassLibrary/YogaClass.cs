@@ -1,6 +1,6 @@
 ﻿namespace YogaManagement_ClassLibrary
 {
-    public class Class
+    public class YogaClass
     {
         public int Id { get; set; }
         public string Description { get; set; }

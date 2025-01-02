@@ -1,0 +1,128 @@
+﻿@page
+@model YogaManagement_WebApp.Pages.YogaClasses.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+@* <div>
+    <h4>YogaClass</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.ClassStart)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.ClassStart)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.ClassEnd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.ClassEnd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.AvailableFormats)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.AvailableFormats)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.Specialities)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.Specialities)
+        </dd>
+    </dl>
+</div> *@
+<div>
+    <h4>Yoga Class</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YogaClass.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YogaClass.Description)
+        </dd>
+
+        <dt class="col-sm-2">
+            Start Time
+        </dt>
+        <dd class="col-sm-10">
+            @Model.YogaClass.ClassStart.ToString("f")
+        </dd>
+
+        <dt class="col-sm-2">
+            End Time
+        </dt>
+        <dd class="col-sm-10">
+            @Model.YogaClass.ClassEnd.ToString("f")
+        </dd>
+
+        <dt class="col-sm-2">
+            Available Formats
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var format in Model.YogaClass.AvailableFormats)
+                {
+                    <li>@format</li>
+                }
+            </ul>
+        </dd>
+
+        <dt class="col-sm-2">
+            Specialities
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var speciality in Model.YogaClass.Specialities)
+                {
+                    <li>@speciality</li>
+                }
+            </ul>
+        </dd>
+
+        <dt class="col-sm-2">
+            Location
+        </dt>
+        <dd class="col-sm-10">
+            @Model.YogaClass.ClassLocation.Location
+            <small> - @Model.YogaClass.ClassLocation.description</small>
+        </dd>
+    </dl>
+</div>
+
+
+<h3>Instructors</h3>
+@if (Model.YogaClass.InstructorClasses.Any())
+{
+    <ul>
+        @foreach (var instructorClass in Model.YogaClass.InstructorClasses)
+        {
+            <li>
+                <a asp-page="/Instructors/Details" asp-route-id="@instructorClass.FK_Instructor.Id">
+                    @instructorClass.FK_Instructor.Name
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No instructors assigned to this class.</p>
+}
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.YogaClass.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

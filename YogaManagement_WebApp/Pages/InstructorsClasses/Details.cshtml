@@ -1,0 +1,31 @@
+﻿@page
+@model YogaManagement_WebApp.Pages.InstructorsClasses.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InstructorClass</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InstructorClass.FK_Instructor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InstructorClass.FK_Instructor.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InstructorClass.FK_Class)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InstructorClass.FK_Class.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-page="./Index">Back to List</a>
+</div>

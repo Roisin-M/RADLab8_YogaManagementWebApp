@@ -1,0 +1,43 @@
+﻿@page
+@model YogaManagement_WebApp.Pages.ClassLocations.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClassLocation</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassLocation.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassLocation.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassLocation.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassLocation.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassLocation.MaxCapacity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassLocation.MaxCapacity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassLocation.FormatsAvailable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassLocation.FormatsAvailable)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ClassLocation.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

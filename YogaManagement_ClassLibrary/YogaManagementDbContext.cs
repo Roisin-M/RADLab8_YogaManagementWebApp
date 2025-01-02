@@ -14,7 +14,7 @@ namespace YogaManagement_ClassLibrary
         : base(options) { }
 
         //Dbset properties
-        public DbSet<Class> Classes => Set<Class>();
+        public DbSet<YogaClass> Classes => Set<YogaClass>();
         public DbSet<Instructor> Instructors => Set<Instructor>();
         public DbSet<ClassLocation> ClassLocations => Set<ClassLocation>();
         public DbSet<InstructorClass> InstructorClasses => Set<InstructorClass>();
@@ -48,7 +48,7 @@ namespace YogaManagement_ClassLibrary
                 .HasForeignKey(ic => ic.ClassId);
 
             // Configure relationships for Class and ClassLocation
-            modelBuilder.Entity<Class>()
+            modelBuilder.Entity<YogaClass>()
                 .HasOne(c => c.ClassLocation)
                 .WithMany(cl => cl.Classes)
                 .HasForeignKey("ClassLocationId");

@@ -143,7 +143,7 @@ namespace YogaManagement_ConsoleApp
             context.SaveChanges();
 
             // Classes
-            var class1 = new Class
+            var class1 = new YogaClass
             {
                 Description = "Morning Flow",
                 ClassStart = DateTime.Now.AddHours(2),
@@ -153,7 +153,7 @@ namespace YogaManagement_ConsoleApp
                 Specialities = new List<YogaSpeciality> { YogaSpeciality.Hatha, YogaSpeciality.Vinyasa }
             };
 
-            var class2 = new Class
+            var class2 = new YogaClass
             {
                 Description = "Evening Relaxation",
                 ClassStart = DateTime.Now.AddHours(5),

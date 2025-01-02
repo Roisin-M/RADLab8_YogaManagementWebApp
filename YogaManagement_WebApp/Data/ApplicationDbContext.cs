@@ -13,14 +13,16 @@ namespace YogaManagement_WebApp.Data
             : base(options)
         {
         }
-       // public DbSet<Instructor> Instructors => Set<Instructor>();
+        public DbSet<Instructor> Instructors => Set<Instructor>();
 
-        public DbSet<Class> Classs => Set<Class>();
+        public DbSet<YogaClass> Classs => Set<YogaClass>();
         public DbSet<ClassLocation> ClassLocations => Set<ClassLocation>();
         public DbSet<InstructorClass> InstructorClasses => Set<InstructorClass>();
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             // Adjust column types for SQLite compatibility
             //modelBuilder.Entity<IdentityRole>(entity =>
             //{
@@ -67,6 +69,8 @@ namespace YogaManagement_WebApp.Data
             //    entity.Property(e => e.Value).HasColumnType("TEXT");
             //    entity.Property(e => e.Name).HasColumnType("TEXT");
             //});
+
+            //required for Identity setup
             base.OnModelCreating(modelBuilder);
 
             // Define the many-to-many relationship for InstructorClass
@@ -84,7 +88,7 @@ namespace YogaManagement_WebApp.Data
                 .HasForeignKey(ic => ic.ClassId);
 
             // Configure relationships for Class and ClassLocation
-            modelBuilder.Entity<Class>()
+            modelBuilder.Entity<YogaClass>()
                 .HasOne(c => c.ClassLocation)
                 .WithMany(cl => cl.Classes)
                 .HasForeignKey("ClassLocationId");

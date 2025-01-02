@@ -13,6 +13,6 @@ namespace YogaManagement_ClassLibrary
         public string InstructorId { get; set; }
         public int ClassId { get; set; }
         public virtual Instructor FK_Instructor { get; set; }
-        public virtual Class FK_Class { get; set; }
+        public virtual YogaClass FK_Class { get; set; }
     }
 }
