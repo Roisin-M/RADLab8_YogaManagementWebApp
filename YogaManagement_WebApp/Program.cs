@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using YogaManagement_WebApp.Data;
-using YogaManagement_ClassLibrary
+using YogaManagement_ClassLibrary;
 
 namespace YogaManagement_WebApp
 {
@@ -14,15 +14,15 @@ namespace YogaManagement_WebApp
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             //sql Lite
-            builder.Services.AddDbContext<ApplicationDbContext>(options
-                =>
-            options.UseSqlite(builder.Configuration.GetConnectionString(
-                "DefaultConnection")));
+            //builder.Services.AddDbContext<ApplicationDbContext>(options
+            //    =>
+            //options.UseSqlite(builder.Configuration.GetConnectionString(
+            //    "DefaultConnection")));
 
             //sql server- using sql lite instead
-            //builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(connectionString));
-            //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<Instructor>(options
                 => options.SignIn.RequireConfirmedAccount = true)
