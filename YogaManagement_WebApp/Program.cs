@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using YogaManagement_WebApp.Data;
+using YogaManagement_ClassLibrary
 
 namespace YogaManagement_WebApp
 {
@@ -23,7 +24,7 @@ namespace YogaManagement_WebApp
             //    options.UseSqlServer(connectionString));
             //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options
+            builder.Services.AddDefaultIdentity<Instructor>(options
                 => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddRazorPages();
