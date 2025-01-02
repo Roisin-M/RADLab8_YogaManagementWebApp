@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_ConsoleApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_ClassLibrary", "YogaManagement_ClassLibrary\YogaManagement_ClassLibrary.csproj", "{3441E032-B094-411B-916B-303238437ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YogaManagement_WebApp", "YogaManagement_WebApp\YogaManagement_WebApp.csproj", "{183BF3F0-C537-4121-BC51-C4210A0B95B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3441E032-B094-411B-916B-303238437ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3441E032-B094-411B-916B-303238437ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3441E032-B094-411B-916B-303238437ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183BF3F0-C537-4121-BC51-C4210A0B95B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183BF3F0-C537-4121-BC51-C4210A0B95B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183BF3F0-C537-4121-BC51-C4210A0B95B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183BF3F0-C537-4121-BC51-C4210A0B95B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
